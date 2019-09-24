@@ -7,7 +7,8 @@
       <Unit0>
         <Filename Value="filesearch.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="33" Y="18"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="5" Y="4"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -19,13 +20,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Main"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="214"/>
-        <CursorPos X="5" Y="249"/>
+        <EditorIndex Value="-1"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
       <Unit2>
@@ -35,7 +31,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="657"/>
         <CursorPos Y="671"/>
-        <UsageCount Value="179"/>
+        <UsageCount Value="181"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
       <Unit3>
@@ -46,7 +42,7 @@
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="SearchGridFrm"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="173"/>
+        <UsageCount Value="175"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit3>
       <Unit4>
@@ -56,12 +52,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ExpandFrm"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="43"/>
-        <CursorPos X="45" Y="69"/>
-        <UsageCount Value="135"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="10"/>
+        <UsageCount Value="137"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit4>
       <Unit5>
@@ -71,10 +64,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ModifiedFrm"/>
-        <EditorIndex Value="1"/>
-        <UsageCount Value="133"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="135"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit5>
       <Unit6>
@@ -83,7 +74,7 @@
         <UnitName Value="GraphTools"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="10"/>
-        <UsageCount Value="115"/>
+        <UsageCount Value="117"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
       <Unit7>
@@ -96,20 +87,17 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="34"/>
         <CursorPos X="17" Y="11"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="90"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit7>
       <Unit8>
         <Filename Value="searchtools.pas"/>
         <UnitName Value="SearchTools"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="178"/>
-        <CursorPos X="16" Y="197"/>
+        <EditorIndex Value="-1"/>
         <UsageCount Value="95"/>
         <Bookmarks Count="1">
           <Item0 Y="430" ID="1"/>
         </Bookmarks>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit8>
       <Unit9>
@@ -164,78 +152,69 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit14>
       <Unit15>
-        <Filename Value="../../../../FreePascal/fpc/rtl/objpas/classes/classesh.inc"/>
+        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/objpas/classes/classesh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="729"/>
         <CursorPos X="90" Y="750"/>
         <UsageCount Value="13"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit15>
       <Unit16>
-        <Filename Value="../../../../FreePascal/fpc/rtl/objpas/classes/stringl.inc"/>
+        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/objpas/classes/stringl.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1682"/>
         <CursorPos X="3" Y="1685"/>
         <UsageCount Value="11"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit16>
       <Unit17>
-        <Filename Value="../../../../FreePascal/fpc/rtl/objpas/sysutils/filutilh.inc"/>
+        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/objpas/sysutils/filutilh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="113"/>
         <CursorPos X="3" Y="132"/>
         <UsageCount Value="13"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit17>
       <Unit18>
-        <Filename Value="../../../../FreePascal/lazarus/lcl/controls.pp"/>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/controls.pp"/>
         <UnitName Value="Controls"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1409"/>
         <CursorPos Y="1427"/>
         <UsageCount Value="34"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit18>
       <Unit19>
-        <Filename Value="../../../../FreePascal/lazarus/lcl/include/wincontrol.inc"/>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/wincontrol.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="7518"/>
         <CursorPos Y="7540"/>
         <UsageCount Value="60"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit19>
       <Unit20>
-        <Filename Value="../../../../FreePascal/fpc/rtl/inc/sortbase.pp"/>
+        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/inc/sortbase.pp"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="36"/>
         <UsageCount Value="7"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit20>
       <Unit21>
-        <Filename Value="../../../../FreePascal/lazarus/lcl/forms.pp"/>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/forms.pp"/>
         <UnitName Value="Forms"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="348"/>
         <CursorPos X="14" Y="369"/>
         <UsageCount Value="14"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit21>
       <Unit22>
-        <Filename Value="../../../../FreePascal/lazarus/lcl/graphics.pp"/>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/graphics.pp"/>
         <UnitName Value="Graphics"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="963"/>
         <CursorPos X="20" Y="970"/>
         <UsageCount Value="12"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit22>
       <Unit23>
-        <Filename Value="../../../../FreePascal/lazarus/lcl/include/winapih.inc"/>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/winapih.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="323"/>
         <CursorPos X="10" Y="340"/>
         <UsageCount Value="1"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit23>
       <Unit24>
         <Filename Value="modifiedfrm.lfm"/>
@@ -244,12 +223,11 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit24>
       <Unit25>
-        <Filename Value="../../../../FreePascal/lazarus/lcl/include/canvas.inc"/>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/canvas.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1766"/>
         <CursorPos Y="1785"/>
         <UsageCount Value="25"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit25>
       <Unit26>
         <Filename Value="sizefrm.lfm"/>
@@ -259,31 +237,28 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit26>
       <Unit27>
-        <Filename Value="../../../../FreePascal/lazarus/lcl/include/customform.inc"/>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/customform.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="438"/>
         <CursorPos Y="460"/>
         <UsageCount Value="8"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit27>
       <Unit28>
-        <Filename Value="../../../../FreePascal/fpc/rtl/linux/ostypes.inc"/>
+        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/linux/ostypes.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="74"/>
         <CursorPos X="3" Y="93"/>
         <UsageCount Value="10"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit28>
       <Unit29>
-        <Filename Value="../../../../FreePascal/fpc/rtl/unix/bunxovlh.inc"/>
+        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/unix/bunxovlh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3"/>
         <CursorPos X="11" Y="42"/>
         <UsageCount Value="10"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit29>
     </Units>
-    <JumpHistory Count="7" HistoryIndex="6">
+    <JumpHistory Count="2" HistoryIndex="1">
       <Position1>
         <Filename Value="filesearch.lpr"/>
         <Caret Line="23" Column="43"/>
@@ -292,26 +267,6 @@
         <Filename Value="filesearch.lpr"/>
         <Caret Line="10"/>
       </Position2>
-      <Position3>
-        <Filename Value="filesearch.lpr"/>
-        <Caret Line="12" Column="28"/>
-      </Position3>
-      <Position4>
-        <Filename Value="main.pas"/>
-        <Caret TopLine="115"/>
-      </Position4>
-      <Position5>
-        <Filename Value="filesearch.lpr"/>
-        <Caret Line="18" Column="33"/>
-      </Position5>
-      <Position6>
-        <Filename Value="main.pas"/>
-        <Caret Line="199" Column="67" TopLine="187"/>
-      </Position6>
-      <Position7>
-        <Filename Value="filesearch.lpr"/>
-        <Caret Line="18" Column="33"/>
-      </Position7>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
