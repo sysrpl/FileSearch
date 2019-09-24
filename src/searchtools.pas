@@ -108,7 +108,7 @@ type
 
 implementation
 
-{$ifdef unix}
+{$ifdef linux}
 uses
   BaseUnix;
 {$endif}
@@ -145,7 +145,7 @@ begin
     and (S.Name <> '..');
 end;
 
-{$ifdef unix}
+{$ifdef linux}
 function IsNotSymLink(const FileItem: string): Boolean;
 var
   Stat: TStat;
@@ -190,7 +190,7 @@ begin
               if (M < Params.DateFrom) or (M > Params.DateTo) then
                 Continue;
             end;
-            if (Items.IndexOf(S.Name) < 0) {$ifdef unix}and IsNotSymLink(F + S.Name){$endif} then
+            if (Items.IndexOf(S.Name) < 0) {$ifdef linux}and IsNotSymLink(F + S.Name){$endif} then
             begin
               Items.Add(S.Name);
               OnFindFile(F, S.Name, S, CanContinue);
@@ -214,7 +214,7 @@ begin
           if not CanContinue then
             Exit;
           P := F + S.Name;
-          if IsFolder(S) {$ifdef unix}and IsNotSymLink(P){$endif} then
+          if IsFolder(S) {$ifdef linux}and IsNotSymLink(P){$endif} then
             Items.Add(P);
         until FindNext(S) <> 0;
       finally

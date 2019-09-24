@@ -195,8 +195,16 @@ end;
 
 procedure TSearchForm.FormShow(Sender: TObject);
 begin
+  OnShow := nil;
   BrowseButton.Top := FolderEdit.Top + FolderEdit.Height div 2 -
     BrowseButton.Height div 2;
+  {$ifdef darwin}
+  FModifiedFrame.Expanded := not FModifiedFrame.Expanded;
+  FModifiedFrame.Expanded := not FModifiedFrame.Expanded;
+  FSizeFrame.Expanded := not FSizeFrame.Expanded;
+  FSizeFrame.Expanded := not FSizeFrame.Expanded;
+  ExpandChange(Self);
+  {$endif}
 end;
 
 procedure TSearchForm.ExpandChange(Sender: TObject);
@@ -235,6 +243,11 @@ begin
   else
     FMatch := IntToStr(FSearch.Matches) + ' files found';
   UpdateProgress;
+  {$ifdef darwin}
+  Tag := (Tag + 1) mod 3;
+  if Tag = 0 then
+    Application.ProcessMessages;
+  {$endif}
 end;
 
 procedure TSearchForm.SearchFinish(Sender: TObject);
