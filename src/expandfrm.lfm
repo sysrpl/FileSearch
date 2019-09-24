@@ -1,0 +1,16 @@
+object ExpandFrame: TExpandFrame
+  Left = 0
+  Height = 240
+  Top = 0
+  Width = 320
+  TabOrder = 0
+  DesignLeft = 324
+  DesignTop = 23
+  object MouseTimer: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = MouseTimerTimer
+    Left = 24
+    Top = 16
+  end
+end

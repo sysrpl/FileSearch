@@ -1,0 +1,74 @@
+inherited SizeFrame: TSizeFrame
+  Height = 118
+  Width = 469
+  ClientHeight = 118
+  ClientWidth = 469
+  DesignLeft = 323
+  DesignTop = 22
+  object SizeBox: TComboBox[0]
+    Left = 8
+    Height = 27
+    Top = 24
+    Width = 128
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'Less than'
+      'Greater than'
+      'Between'
+    )
+    OnChange = SizeBoxChange
+    Style = csDropDownList
+    TabOrder = 0
+    Text = 'Less than'
+  end
+  object FromEdit: TEdit[1]
+    Left = 144
+    Height = 29
+    Top = 24
+    Width = 64
+    Alignment = taRightJustify
+    OnExit = FromEditExit
+    TabOrder = 1
+    Text = '0'
+  end
+  object ToEdit: TEdit[2]
+    Left = 248
+    Height = 29
+    Top = 24
+    Width = 64
+    Alignment = taRightJustify
+    OnExit = ToEditExit
+    TabOrder = 2
+    Text = '0'
+  end
+  object UnitsBox: TComboBox[3]
+    Left = 320
+    Height = 27
+    Top = 26
+    Width = 80
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'Bytes'
+      'KB'
+      'MB'
+      'GB'
+    )
+    Style = csDropDownList
+    TabOrder = 3
+    Text = 'Bytes'
+  end
+  object AndLabel: TLabel[4]
+    Left = 208
+    Height = 17
+    Top = 32
+    Width = 26
+    Caption = 'and'
+    ParentColor = False
+  end
+  inherited MouseTimer: TTimer[5]
+    Left = 56
+    Top = 88
+  end
+end

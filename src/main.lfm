@@ -1,0 +1,136 @@
+object SearchForm: TSearchForm
+  Left = 250
+  Height = 537
+  Top = 250
+  Width = 376
+  Caption = 'Search for files'
+  ClientHeight = 537
+  ClientWidth = 376
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnResize = FormResize
+  OnShow = FormShow
+  Position = poScreenCenter
+  object FolderEdit: TComboBox
+    Left = 8
+    Height = 29
+    Top = 32
+    Width = 278
+    Anchors = [akTop, akLeft, akRight]
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object TextEdit: TEdit
+    Left = 8
+    Height = 29
+    Hint = 'Search for files including a word or phrase  (optional)'
+    Top = 160
+    Width = 358
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 3
+  end
+  object FileLabel: TLabel
+    Left = 8
+    Height = 17
+    Top = 72
+    Width = 243
+    Caption = 'Include files matching these names:'
+    ParentColor = False
+  end
+  object FolderLabel: TLabel
+    Left = 8
+    Height = 17
+    Top = 8
+    Width = 137
+    Caption = 'Search in the folder:'
+    ParentColor = False
+  end
+  object RecurseBox: TCheckBox
+    Left = 8
+    Height = 23
+    Hint = 'Include all subfolders when performing the search'
+    Top = 216
+    Width = 292
+    Caption = 'Search within all subfolders recursively'
+    Checked = True
+    State = cbChecked
+    TabOrder = 5
+  end
+  object CaseBox: TCheckBox
+    Left = 8
+    Height = 23
+    Hint = 'Match a word or phrase using the exact character case'
+    Top = 192
+    Width = 270
+    Caption = 'Perform a case sensitive text search'
+    TabOrder = 4
+  end
+  object MatchLabel: TLabel
+    Left = 8
+    Height = 17
+    Top = 280
+    Width = 114
+    Caption = '0 matches found'
+    ParentColor = False
+  end
+  object SearchButton: TButton
+    Left = 213
+    Height = 25
+    Hint = 'Start a search using the criteria above'
+    Top = 280
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Search'
+    OnClick = SearchButtonClick
+    TabOrder = 6
+  end
+  object CloseButton: TButton
+    Left = 291
+    Height = 25
+    Top = 280
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Close'
+    OnClick = CloseButtonClick
+    TabOrder = 7
+  end
+  object BrowseButton: TButton
+    Left = 291
+    Height = 25
+    Hint = 'Browse for a folder'
+    Top = 36
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Browse'
+    OnClick = BrowseButtonClick
+    TabOrder = 1
+  end
+  object TextLabel: TLabel
+    Left = 8
+    Height = 17
+    Top = 136
+    Width = 213
+    Caption = 'Containing the word or phrase:'
+    ParentColor = False
+  end
+  object FileEdit: TComboBox
+    Left = 8
+    Height = 29
+    Top = 96
+    Width = 358
+    Anchors = [akTop, akLeft, akRight]
+    ItemHeight = 0
+    TabOrder = 2
+  end
+  object SelectDirectoryDialog: TSelectDirectoryDialog
+    Left = 168
+    Top = 328
+  end
+  object SearchTimer: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = SearchTimerTimer
+    Left = 170
+    Top = 390
+  end
+end

@@ -1,0 +1,102 @@
+object SearchGrid: TSearchGrid
+  Left = 0
+  Height = 352
+  Top = 0
+  Width = 568
+  HorzScrollBar.Visible = False
+  VertScrollBar.Visible = False
+  ClientHeight = 352
+  ClientWidth = 568
+  TabOrder = 0
+  DesignLeft = 1509
+  DesignTop = 13
+  object SortHeader: THeaderControl
+    Left = 0
+    Height = 30
+    Top = 0
+    Width = 568
+    DragReorder = True
+    Sections = <    
+      item
+        Alignment = taLeftJustify
+        MinWidth = 20
+        Text = 'Name'
+        Width = 175
+        Visible = True
+      end    
+      item
+        Alignment = taLeftJustify
+        MinWidth = 20
+        Text = 'Size'
+        Width = 100
+        Visible = True
+      end    
+      item
+        Alignment = taLeftJustify
+        MinWidth = 20
+        Text = 'Modified'
+        Width = 200
+        Visible = True
+      end    
+      item
+        Alignment = taLeftJustify
+        MinWidth = 20
+        Text = 'Matches'
+        Width = 100
+        Visible = True
+      end>
+    OnSectionDrag = SortHeaderSectionDrag
+    OnSectionEndDrag = SortHeaderSectionEndDrag
+    OnSectionClick = SortHeaderSectionClick
+    OnSectionResize = SortHeaderSectionResize
+    OnSectionTrack = SortHeaderSectionTrack
+    Align = alTop
+  end
+  object SearchGrid: TDrawGrid
+    Left = 0
+    Height = 321
+    Top = 31
+    Width = 568
+    Align = alClient
+    BorderSpacing.Top = 1
+    BorderStyle = bsNone
+    Color = clDefault
+    ColCount = 1
+    DefaultDrawing = False
+    DefaultRowHeight = 25
+    DoubleBuffered = False
+    ExtendedSelect = False
+    FixedCols = 0
+    FixedRows = 0
+    Options = [goThumbTracking, goSmoothScroll]
+    ParentDoubleBuffered = False
+    RowCount = 0
+    ScrollBars = ssAutoVertical
+    TabOrder = 1
+    OnDblClick = SearchGridDblClick
+    OnDrawCell = SearchGridDrawCell
+    OnMouseUp = SearchGridMouseUp
+  end
+  object SearchMenu: TPopupMenu
+    Left = 88
+    Top = 192
+    object OpenLocationMenuItem: TMenuItem
+      Caption = 'Open file location'
+      Default = True
+      OnClick = MenuItemClick
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object CopyLocationMenuItem: TMenuItem
+      Tag = 1
+      Caption = 'Copy file location to clipboard'
+      OnClick = MenuItemClick
+    end
+    object CopyNameMenuItem: TMenuItem
+      Tag = 2
+      Caption = 'Copy file name to clipboard'
+      OnClick = MenuItemClick
+    end
+  end
+end

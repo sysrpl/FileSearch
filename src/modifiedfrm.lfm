@@ -1,0 +1,68 @@
+inherited ModifiedFrame: TModifiedFrame
+  Height = 80
+  Width = 478
+  ClientHeight = 80
+  ClientWidth = 478
+  DesignLeft = 322
+  DesignTop = 21
+  object WhenBox: TComboBox[0]
+    Left = 8
+    Height = 27
+    Top = 24
+    Width = 128
+    ItemHeight = 0
+    Items.Strings = (
+      'Today'
+      'This Week'
+      'This Month'
+      'After'
+      'Before'
+      'Between'
+    )
+    OnChange = WhenBoxChange
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object FromEdit: TDateEdit[1]
+    Left = 144
+    Height = 29
+    Top = 24
+    Width = 127
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 23
+    NumGlyphs = 1
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 1
+    Visible = False
+    Text = 'FromEdit'
+  end
+  object AndLabel: TLabel[2]
+    Left = 280
+    Height = 17
+    Top = 34
+    Width = 26
+    Caption = 'and'
+    Enabled = False
+    ParentColor = False
+    Visible = False
+  end
+  object ToEdit: TDateEdit[3]
+    Left = 312
+    Height = 29
+    Top = 22
+    Width = 127
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 23
+    NumGlyphs = 1
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 2
+    Visible = False
+    Text = 'ToEdit'
+  end
+  inherited MouseTimer: TTimer[4]
+  end
+end
