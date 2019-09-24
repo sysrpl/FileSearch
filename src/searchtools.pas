@@ -108,11 +108,6 @@ type
 
 implementation
 
-{$ifdef linux}
-uses
-  BaseUnix;
-{$endif}
-
 type
   TCanContinue = function: Boolean of object;
   TOnFindFile = procedure(Folder: string; FileName: string; const Search: TSearchRec; CanContinue: TCanContinue) of object;
@@ -134,6 +129,17 @@ begin
     Result := SysCompare(List[Index1], List[Index2]);
 end;
 
+const
+{$ifdef unix}
+  faSymbolic = faSymlink{%H-};
+  faHide = faHidden{%H-};
+{$else}
+  faSymbolic = 0;
+  faHide = 0;
+{$endif}
+  faFile = faAnyFile or faHide or faSymbolic;
+  faFolder = faDirectory or faHide or faSymbolic;
+
 function IsNotFolder(const S: TSearchRec): Boolean; inline;
 begin
   Result := S.Attr and faDirectory = 0;
@@ -141,19 +147,9 @@ end;
 
 function IsFolder(const S: TSearchRec): Boolean; inline;
 begin
-  Result := (S.Attr and faDirectory = faDirectory) and (S.Name <> '.')
+  Result := (S.Attr and faDirectory = faDirectory) and (S.Attr and faSymbolic = 0) and (S.Name <> '.')
     and (S.Name <> '..');
 end;
-
-{$ifdef linux}
-function IsNotSymLink(const FileItem: string): Boolean;
-var
-  Stat: TStat;
-begin
-  {%H-}fpLstat(PChar(FileItem), {%H-}Stat);
-  Result := not fpS_ISLNK(Stat.st_mode);
-end;
-{$endif}
 
 procedure FindFiles(const Folder: string; Params: TSearchParams; OnFindFile: TOnFindFile; CanContinue: TCanContinue);
 var
@@ -174,7 +170,7 @@ begin
     for I := 0 to Params.FPatterns.Count - 1 do
     begin
       P := Params.FPatterns[I];
-      if FindFirst(F + P, faAnyFile or faHidden{%H-}, S) = 0 then
+      if FindFirst(F + P, faFile, S) = 0 then
       try
         repeat
           if not CanContinue then
@@ -190,7 +186,7 @@ begin
               if (M < Params.DateFrom) or (M > Params.DateTo) then
                 Continue;
             end;
-            if (Items.IndexOf(S.Name) < 0) {$ifdef linux}and IsNotSymLink(F + S.Name){$endif} then
+            if (Items.IndexOf(S.Name) < 0) then
             begin
               Items.Add(S.Name);
               OnFindFile(F, S.Name, S, CanContinue);
@@ -208,14 +204,13 @@ begin
   begin
     Items := TStringList.Create;
     try
-      if FindFirst(F + '*', faDirectory or faHidden{%H-}, S) = 0 then
+      if FindFirst(F + '*', faFolder, S) = 0 then
       try
         repeat
           if not CanContinue then
             Exit;
-          P := F + S.Name;
-          if IsFolder(S) {$ifdef linux}and IsNotSymLink(P){$endif} then
-            Items.Add(P);
+          if IsFolder(S) then
+            Items.Add(F + S.Name);
         until FindNext(S) <> 0;
       finally
         FindClose(S);
@@ -377,7 +372,7 @@ end;
 
 const
   MaxAdd = 100;
-  MaxItems = 10;
+  MaxItems = 25;
 
 type
   TSearchThread = class(TThread)

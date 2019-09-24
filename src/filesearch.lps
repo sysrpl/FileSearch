@@ -19,7 +19,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Main"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="106"/>
         <CursorPos Y="125"/>
         <UsageCount Value="200"/>
@@ -67,8 +67,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ModifiedFrm"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="71"/>
         <UsageCount Value="135"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -99,11 +99,15 @@
       <Unit8>
         <Filename Value="searchtools.pas"/>
         <UnitName Value="SearchTools"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="127"/>
+        <CursorPos X="52" Y="144"/>
         <UsageCount Value="95"/>
         <Bookmarks Count="1">
           <Item0 Y="430" ID="1"/>
         </Bookmarks>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit8>
       <Unit9>
