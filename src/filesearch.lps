@@ -7,7 +7,6 @@
       <Unit0>
         <Filename Value="filesearch.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <CursorPos X="5" Y="4"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -20,8 +19,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Main"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="106"/>
+        <CursorPos Y="125"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
       <Unit2>
@@ -64,8 +67,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ModifiedFrm"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
         <UsageCount Value="135"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit5>
       <Unit6>
@@ -152,28 +158,28 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit14>
       <Unit15>
-        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/objpas/classes/classesh.inc"/>
+        <Filename Value="../../../../FreePascal/fpc/rtl/objpas/classes/classesh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="729"/>
         <CursorPos X="90" Y="750"/>
         <UsageCount Value="13"/>
       </Unit15>
       <Unit16>
-        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/objpas/classes/stringl.inc"/>
+        <Filename Value="../../../../FreePascal/fpc/rtl/objpas/classes/stringl.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1682"/>
         <CursorPos X="3" Y="1685"/>
         <UsageCount Value="11"/>
       </Unit16>
       <Unit17>
-        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/objpas/sysutils/filutilh.inc"/>
+        <Filename Value="../../../../FreePascal/fpc/rtl/objpas/sysutils/filutilh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="113"/>
         <CursorPos X="3" Y="132"/>
         <UsageCount Value="13"/>
       </Unit17>
       <Unit18>
-        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/controls.pp"/>
+        <Filename Value="../../../../FreePascal/lazarus/lcl/controls.pp"/>
         <UnitName Value="Controls"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1409"/>
@@ -181,20 +187,20 @@
         <UsageCount Value="34"/>
       </Unit18>
       <Unit19>
-        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/wincontrol.inc"/>
+        <Filename Value="../../../../FreePascal/lazarus/lcl/include/wincontrol.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="7518"/>
         <CursorPos Y="7540"/>
         <UsageCount Value="60"/>
       </Unit19>
       <Unit20>
-        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/inc/sortbase.pp"/>
+        <Filename Value="../../../../FreePascal/fpc/rtl/inc/sortbase.pp"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="36"/>
         <UsageCount Value="7"/>
       </Unit20>
       <Unit21>
-        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/forms.pp"/>
+        <Filename Value="../../../../FreePascal/lazarus/lcl/forms.pp"/>
         <UnitName Value="Forms"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="348"/>
@@ -202,7 +208,7 @@
         <UsageCount Value="14"/>
       </Unit21>
       <Unit22>
-        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/graphics.pp"/>
+        <Filename Value="../../../../FreePascal/lazarus/lcl/graphics.pp"/>
         <UnitName Value="Graphics"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="963"/>
@@ -210,7 +216,7 @@
         <UsageCount Value="12"/>
       </Unit22>
       <Unit23>
-        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/winapih.inc"/>
+        <Filename Value="../../../../FreePascal/lazarus/lcl/include/winapih.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="323"/>
         <CursorPos X="10" Y="340"/>
@@ -223,7 +229,7 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit24>
       <Unit25>
-        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/canvas.inc"/>
+        <Filename Value="../../../../FreePascal/lazarus/lcl/include/canvas.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1766"/>
         <CursorPos Y="1785"/>
@@ -237,28 +243,28 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit26>
       <Unit27>
-        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/customform.inc"/>
+        <Filename Value="../../../../FreePascal/lazarus/lcl/include/customform.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="438"/>
         <CursorPos Y="460"/>
         <UsageCount Value="8"/>
       </Unit27>
       <Unit28>
-        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/linux/ostypes.inc"/>
+        <Filename Value="../../../../FreePascal/fpc/rtl/linux/ostypes.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="74"/>
         <CursorPos X="3" Y="93"/>
         <UsageCount Value="10"/>
       </Unit28>
       <Unit29>
-        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/unix/bunxovlh.inc"/>
+        <Filename Value="../../../../FreePascal/fpc/rtl/unix/bunxovlh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3"/>
         <CursorPos X="11" Y="42"/>
         <UsageCount Value="10"/>
       </Unit29>
     </Units>
-    <JumpHistory Count="2" HistoryIndex="1">
+    <JumpHistory Count="3" HistoryIndex="2">
       <Position1>
         <Filename Value="filesearch.lpr"/>
         <Caret Line="23" Column="43"/>
@@ -267,6 +273,10 @@
         <Filename Value="filesearch.lpr"/>
         <Caret Line="10"/>
       </Position2>
+      <Position3>
+        <Filename Value="filesearch.lpr"/>
+        <Caret Line="4" Column="5"/>
+      </Position3>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

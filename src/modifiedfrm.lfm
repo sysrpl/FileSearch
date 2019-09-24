@@ -11,6 +11,7 @@ inherited ModifiedFrame: TModifiedFrame
     Top = 24
     Width = 128
     ItemHeight = 0
+    ItemIndex = 0
     Items.Strings = (
       'Today'
       'This Week'
@@ -22,6 +23,7 @@ inherited ModifiedFrame: TModifiedFrame
     OnChange = WhenBoxChange
     Style = csDropDownList
     TabOrder = 0
+    Text = 'Today'
   end
   object FromEdit: TDateEdit[1]
     Left = 144
@@ -42,7 +44,7 @@ inherited ModifiedFrame: TModifiedFrame
     Left = 280
     Height = 17
     Top = 34
-    Width = 26
+    Width = 21
     Caption = 'and'
     Enabled = False
     ParentColor = False
