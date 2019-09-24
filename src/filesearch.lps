@@ -163,6 +163,7 @@
         <TopLine Value="729"/>
         <CursorPos X="90" Y="750"/>
         <UsageCount Value="13"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit15>
       <Unit16>
         <Filename Value="../../../../FreePascal/fpc/rtl/objpas/classes/stringl.inc"/>
@@ -170,6 +171,7 @@
         <TopLine Value="1682"/>
         <CursorPos X="3" Y="1685"/>
         <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit16>
       <Unit17>
         <Filename Value="../../../../FreePascal/fpc/rtl/objpas/sysutils/filutilh.inc"/>
@@ -177,6 +179,7 @@
         <TopLine Value="113"/>
         <CursorPos X="3" Y="132"/>
         <UsageCount Value="13"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit17>
       <Unit18>
         <Filename Value="../../../../FreePascal/lazarus/lcl/controls.pp"/>
@@ -185,6 +188,7 @@
         <TopLine Value="1409"/>
         <CursorPos Y="1427"/>
         <UsageCount Value="34"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit18>
       <Unit19>
         <Filename Value="../../../../FreePascal/lazarus/lcl/include/wincontrol.inc"/>
@@ -192,12 +196,14 @@
         <TopLine Value="7518"/>
         <CursorPos Y="7540"/>
         <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit19>
       <Unit20>
         <Filename Value="../../../../FreePascal/fpc/rtl/inc/sortbase.pp"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="36"/>
         <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit20>
       <Unit21>
         <Filename Value="../../../../FreePascal/lazarus/lcl/forms.pp"/>
@@ -206,6 +212,7 @@
         <TopLine Value="348"/>
         <CursorPos X="14" Y="369"/>
         <UsageCount Value="14"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit21>
       <Unit22>
         <Filename Value="../../../../FreePascal/lazarus/lcl/graphics.pp"/>
@@ -214,6 +221,7 @@
         <TopLine Value="963"/>
         <CursorPos X="20" Y="970"/>
         <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit22>
       <Unit23>
         <Filename Value="../../../../FreePascal/lazarus/lcl/include/winapih.inc"/>
@@ -221,6 +229,7 @@
         <TopLine Value="323"/>
         <CursorPos X="10" Y="340"/>
         <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit23>
       <Unit24>
         <Filename Value="modifiedfrm.lfm"/>
@@ -234,6 +243,7 @@
         <TopLine Value="1766"/>
         <CursorPos Y="1785"/>
         <UsageCount Value="25"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit25>
       <Unit26>
         <Filename Value="sizefrm.lfm"/>
@@ -248,6 +258,7 @@
         <TopLine Value="438"/>
         <CursorPos Y="460"/>
         <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit27>
       <Unit28>
         <Filename Value="../../../../FreePascal/fpc/rtl/linux/ostypes.inc"/>
@@ -255,6 +266,7 @@
         <TopLine Value="74"/>
         <CursorPos X="3" Y="93"/>
         <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit28>
       <Unit29>
         <Filename Value="../../../../FreePascal/fpc/rtl/unix/bunxovlh.inc"/>
@@ -262,6 +274,7 @@
         <TopLine Value="3"/>
         <CursorPos X="11" Y="42"/>
         <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit29>
     </Units>
     <JumpHistory Count="3" HistoryIndex="2">
