@@ -40,7 +40,6 @@ type
     procedure CloseButtonClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
-    procedure FormResize(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure SearchButtonClick(Sender: TObject);
     procedure SearchTimerTimer(Sender: TObject);
@@ -189,10 +188,6 @@ begin
   Close;
 end;
 
-procedure TSearchForm.FormResize(Sender: TObject);
-begin
-end;
-
 procedure TSearchForm.FormShow(Sender: TObject);
 begin
   OnShow := nil;
@@ -256,7 +251,7 @@ begin
   FSearchGrid.SearchFinish;
   SearchTimer.Enabled := False;
   SearchTimer.Tag := 0;
-  UpdateProgress;
+  MatchLabel.Caption := FMatch;
 end;
 
 procedure TSearchForm.SearchButtonClick(Sender: TObject);

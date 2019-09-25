@@ -8,10 +8,9 @@ object SearchForm: TSearchForm
   ClientWidth = 376
   OnClose = FormClose
   OnCreate = FormCreate
-  OnResize = FormResize
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '2.0.2.0'
+  LCLVersion = '2.0.4.0'
   object FolderEdit: TComboBox
     Left = 8
     Height = 29
@@ -124,14 +123,14 @@ object SearchForm: TSearchForm
     TabOrder = 2
   end
   object SelectDirectoryDialog: TSelectDirectoryDialog
-    left = 168
-    top = 328
+    Left = 168
+    Top = 328
   end
   object SearchTimer: TTimer
     Enabled = False
     Interval = 500
     OnTimer = SearchTimerTimer
-    left = 170
-    top = 390
+    Left = 170
+    Top = 390
   end
 end
