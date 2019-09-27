@@ -14,14 +14,13 @@ unit SearchTools;
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, SysUtils, Masks;
 
 { TSearchParams }
 
 type
   TSearchParams = class(TPersistent)
   private
-    FPatterns: TStringList;
     FFolder: string;
     FPattern: string;
     FText: string;
@@ -35,8 +34,6 @@ type
     FSizeTo: Int64;
     procedure Prepare;
   public
-    constructor Create;
-    destructor Destroy; override;
     procedure Assign(Source: TPersistent); override;
     property Folder: string read FFolder write FFolder;
     property Pattern: string read FPattern write FPattern;
@@ -153,11 +150,11 @@ end;
 
 procedure FindFiles(const Folder: string; Params: TSearchParams; OnFindFile: TOnFindFile; CanContinue: TCanContinue);
 var
+  MaskList: TMaskList;
   Items: TStringList;
   M: TDateTime;
   S: TSearchRec;
   F, P: string;
-  I: Integer;
 begin
   if not Assigned(OnFindFile) then
     Exit;
@@ -165,40 +162,37 @@ begin
   if F = '' then
     F := GetUserDir;
   F := IncludeTrailingPathDelimiter(F);
-  Items := TStringList.Create;
+  P := Copy(F, 1, 5);
+  if (P = '/dev/') or (P = '/sys/') then
+    Exit;
+  MaskList := TMaskList.Create(Params.Pattern, ';', {$ifdef unix}True{$else}False{$endif});
   try
-    for I := 0 to Params.FPatterns.Count - 1 do
-    begin
-      P := Params.FPatterns[I];
-      if FindFirst(F + P, faFile, S) = 0 then
-      try
-        repeat
-          if not CanContinue then
-            Exit;
-          if IsNotFolder(S) then
+    if FindFirst(F + '*', faFile, S) = 0 then
+    try
+      repeat
+        if not CanContinue then
+          Exit;
+        if IsNotFolder(S) then
+        begin
+          if not MaskList.Matches(S.Name) then
+            Continue;
+          if Params.SizeRange then
+            if (S.Size < Params.SizeFrom) or (S.Size > Params.SizeTo) then
+              Continue;
+          if Params.DateRange then
           begin
-            if Params.SizeRange then
-              if (S.Size < Params.SizeFrom) or (S.Size > Params.SizeTo) then
-                Continue;
-            if Params.DateRange then
-            begin
-              M := FileDateToDateTime(S.Time);
-              if (M < Params.DateFrom) or (M > Params.DateTo) then
-                Continue;
-            end;
-            if (Items.IndexOf(S.Name) < 0) then
-            begin
-              Items.Add(S.Name);
-              OnFindFile(F, S.Name, S, CanContinue);
-            end;
+            M := FileDateToDateTime(S.Time);
+            if (M < Params.DateFrom) or (M > Params.DateTo) then
+              Continue;
           end;
-        until FindNext(S) <> 0;
-      finally
-        FindClose(S);
-      end;
+          OnFindFile(F, S.Name, S, CanContinue);
+        end;
+      until FindNext(S) <> 0;
+    finally
+      FindClose(S);
     end;
   finally
-    Items.Free;
+    MaskList.Free;
   end;
   if Params.Recursive and CanContinue then
   begin
@@ -291,20 +285,6 @@ end;
 
 { TSearchParams }
 
-constructor TSearchParams.Create;
-begin
-  inherited Create;
-  FPatterns := TStringList.Create;
-  FPatterns.Sorted := True;
-  FPatterns.Duplicates := dupIgnore;
-end;
-
-destructor TSearchParams.Destroy;
-begin
-  FPatterns.Free;
-  inherited Destroy;
-end;
-
 procedure TSearchParams.Assign(Source: TPersistent);
 var
   P: TSearchParams;
@@ -332,30 +312,12 @@ begin
 end;
 
 procedure TSearchParams.Prepare;
-var
-  Items: TStringList;
-  S: string;
-  I: Integer;
 begin
   FFolder := Trim(FFolder);
   FPattern := Trim(FPattern);
+  if FPattern = '' then
+    FPattern := '*';
   FText := Trim(FText);
-  Items := TStringList.Create;
-  try
-    Items.Delimiter := ';';
-    Items.DelimitedText := FPattern;
-    FPatterns.Clear;
-    for I := 0 to Items.Count - 1 do
-    begin
-      S := Trim(Items[I]);
-      if S <> '' then
-        FPatterns.Add(S);
-    end;
-    if FPatterns.Count = 0 then
-      FPatterns.Add('*');
-  finally
-    Items.Free;
-  end;
 end;
 
 { TFileItem }
