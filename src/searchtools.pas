@@ -32,9 +32,13 @@ type
     FSizeRange: Boolean;
     FSizeFrom: Int64;
     FSizeTo: Int64;
+    FMask: TMaskList;
     procedure Prepare;
   public
+    constructor Create;
+    destructor Destroy; override;
     procedure Assign(Source: TPersistent); override;
+    property Mask: TMaskList read FMask;
     property Folder: string read FFolder write FFolder;
     property Pattern: string read FPattern write FPattern;
     property Text: string read FText write FText;
@@ -150,7 +154,6 @@ end;
 
 procedure FindFiles(const Folder: string; Params: TSearchParams; OnFindFile: TOnFindFile; CanContinue: TCanContinue);
 var
-  MaskList: TMaskList;
   Items: TStringList;
   M: TDateTime;
   S: TSearchRec;
@@ -165,34 +168,29 @@ begin
   P := Copy(F, 1, 5);
   if (P = '/dev/') or (P = '/sys/') then
     Exit;
-  MaskList := TMaskList.Create(Params.Pattern, ';', {$ifdef unix}True{$else}False{$endif});
+  if FindFirst(F + '*', faFile, S) = 0 then
   try
-    if FindFirst(F + '*', faFile, S) = 0 then
-    try
-      repeat
-        if not CanContinue then
-          Exit;
-        if IsNotFolder(S) then
-        begin
-          if not MaskList.Matches(S.Name) then
+    repeat
+      if not CanContinue then
+        Exit;
+      if IsNotFolder(S) then
+      begin
+        if not Params.Mask.Matches(S.Name) then
+          Continue;
+        if Params.SizeRange then
+          if (S.Size < Params.SizeFrom) or (S.Size > Params.SizeTo) then
             Continue;
-          if Params.SizeRange then
-            if (S.Size < Params.SizeFrom) or (S.Size > Params.SizeTo) then
-              Continue;
-          if Params.DateRange then
-          begin
-            M := FileDateToDateTime(S.Time);
-            if (M < Params.DateFrom) or (M > Params.DateTo) then
-              Continue;
-          end;
-          OnFindFile(F, S.Name, S, CanContinue);
+        if Params.DateRange then
+        begin
+          M := FileDateToDateTime(S.Time);
+          if (M < Params.DateFrom) or (M > Params.DateTo) then
+            Continue;
         end;
-      until FindNext(S) <> 0;
-    finally
-      FindClose(S);
-    end;
+        OnFindFile(F, S.Name, S, CanContinue);
+      end;
+    until FindNext(S) <> 0;
   finally
-    MaskList.Free;
+    FindClose(S);
   end;
   if Params.Recursive and CanContinue then
   begin
@@ -285,6 +283,21 @@ end;
 
 { TSearchParams }
 
+const
+  MaskCase = {$ifdef unix}True{$else}False{$endif};
+
+constructor TSearchParams.Create;
+begin
+  inherited Create;
+  FMask := TMaskList.Create('*', ';', MaskCase);
+end;
+
+destructor TSearchParams.Destroy;
+begin
+  FMask.Free;
+  inherited Destroy;
+end;
+
 procedure TSearchParams.Assign(Source: TPersistent);
 var
   P: TSearchParams;
@@ -317,6 +330,8 @@ begin
   FPattern := Trim(FPattern);
   if FPattern = '' then
     FPattern := '*';
+  FMask.Free;
+  FMask := TMaskList.Create(FPattern, ';', MaskCase);
   FText := Trim(FText);
 end;
 
