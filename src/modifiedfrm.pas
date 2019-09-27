@@ -32,19 +32,20 @@ type
     procedure Prepare(Params: TSearchParams); override;
   end;
 
+const
+  idxDateToday = 0;
+  idxDateWeek = 1;
+  idxDateMonth = 2;
+  idxDateAfter = 3;
+  idxDateBefore = 4;
+  idxDateBetween = 5;
+
+
 implementation
 
 {$R *.lfm}
 
 { TModifiedFrame }
-
-const
-  idxToday = 0;
-  idxWeek = 1;
-  idxMonth = 2;
-  idxAfter = 3;
-  idxBefore = 4;
-  idxBetween = 5;
 
 constructor TModifiedFrame.Create(AOwner: TComponent);
 begin
@@ -69,7 +70,7 @@ begin
   ToEdit.Left := AndLabel.Left + AndLabel.Width + Margin;
   ToEdit.Top := M - ToEdit.Height div 2;
   case WhenBox.ItemIndex of
-    idxToday..idxMonth:
+    idxDateToday..idxDateMonth:
       begin
         FromEdit.Enabled := False;
         ToEdit.Enabled := False;
@@ -78,7 +79,7 @@ begin
         ToEdit.Visible := False;
         AndLabel.Visible := False;
       end;
-  idxAfter..idxBefore:
+  idxDateAfter..idxDateBefore:
     begin
       FromEdit.Enabled := Expanded;
       ToEdit.Enabled := False;
@@ -101,32 +102,32 @@ procedure TModifiedFrame.Prepare(Params: TSearchParams);
 begin
   Params.DateRange := Expanded;
   case WhenBox.ItemIndex of
-    idxToday:
+    idxDateToday:
       begin
         Params.DateTo := Now;
         Params.DateFrom := Params.DateTo - 1;
       end;
-    idxWeek:
+    idxDateWeek:
       begin
         Params.DateTo := Now;
         Params.DateFrom := Params.DateTo - 7;
       end;
-    idxMonth:
+    idxDateMonth:
       begin
         Params.DateTo := Now;
         Params.DateFrom := Params.DateTo - 31;
       end;
-    idxAfter:
+    idxDateAfter:
       begin
         Params.DateFrom := FromEdit.Date - 0.00001;
         Params.DateTo := Now + 99999;
       end;
-    idxBefore:
+    idxDateBefore:
       begin
         Params.DateTo := FromEdit.Date + 1;
         Params.DateFrom := Params.DateTo - 99999;
       end;
-    idxBetween:
+    idxDateBetween:
       begin
         Params.DateFrom := FromEdit.Date - 0.00001;
         Params.DateTo := ToEdit.Date + 1;

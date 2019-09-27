@@ -122,8 +122,14 @@ begin
       CaseBox.Checked := Settings.Values['case'] = 'Y' ;
       FModifiedFrame.Expanded := Settings.Values['daterange'] = 'Y';
       FModifiedFrame.WhenBox.ItemIndex := StrToIntDef(Settings.Values['datekind'], 0);
-      FModifiedFrame.FromEdit.Date := StrToDateDef(Settings.Values['datefrom'], FModifiedFrame.FromEdit.Date);
-      FModifiedFrame.ToEdit.Date := StrToDateDef(Settings.Values['dateto'], FModifiedFrame.ToEdit.Date);
+      FModifiedFrame.FromEdit.Date := Now - 1;
+      FModifiedFrame.ToEdit.Date := Now;
+      if FModifiedFrame.WhenBox.ItemIndex > idxDateMonth then
+      begin
+        FModifiedFrame.FromEdit.Date := StrToDateDef(Settings.Values['datefrom'], FModifiedFrame.FromEdit.Date);
+        if FModifiedFrame.WhenBox.ItemIndex = idxDateBetween then
+          FModifiedFrame.ToEdit.Date := StrToDateDef(Settings.Values['dateto'], FModifiedFrame.ToEdit.Date)
+      end;
       FSizeFrame.Expanded := Settings.Values['sizerange'] = 'Y';
       FSizeFrame.SizeBox.ItemIndex := StrToIntDef(Settings.Values['sizekind'], 0);
       FSizeFrame.FromValue := StrToFloatDef(Settings.Values['sizefrom'], FSizeFrame.FromValue);
@@ -193,13 +199,11 @@ begin
   OnShow := nil;
   BrowseButton.Top := FolderEdit.Top + FolderEdit.Height div 2 -
     BrowseButton.Height div 2;
-  {$ifdef darwin}
   FModifiedFrame.Expanded := not FModifiedFrame.Expanded;
   FModifiedFrame.Expanded := not FModifiedFrame.Expanded;
   FSizeFrame.Expanded := not FSizeFrame.Expanded;
   FSizeFrame.Expanded := not FSizeFrame.Expanded;
   ExpandChange(Self);
-  {$endif}
 end;
 
 procedure TSearchForm.ExpandChange(Sender: TObject);

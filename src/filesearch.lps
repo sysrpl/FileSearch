@@ -7,7 +7,7 @@
       <Unit0>
         <Filename Value="filesearch.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="5" Y="4"/>
+        <CursorPos X="23" Y="19"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -19,9 +19,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Main"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="108"/>
-        <CursorPos X="16" Y="257"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="97"/>
+        <CursorPos X="11" Y="132"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -55,11 +56,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ExpandFrm"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="43" Y="19"/>
-        <UsageCount Value="195"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <UsageCount Value="196"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit4>
       <Unit5>
@@ -69,8 +68,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ModifiedFrm"/>
-        <EditorIndex Value="4"/>
-        <UsageCount Value="193"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="13"/>
+        <CursorPos X="16" Y="40"/>
+        <UsageCount Value="194"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -81,7 +82,7 @@
         <UnitName Value="GraphTools"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="10"/>
-        <UsageCount Value="175"/>
+        <UsageCount Value="176"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
       <Unit7>
@@ -94,21 +95,19 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="34"/>
         <CursorPos X="17" Y="11"/>
-        <UsageCount Value="148"/>
+        <UsageCount Value="149"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit7>
       <Unit8>
         <Filename Value="searchtools.pas"/>
         <UnitName Value="SearchTools"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="157"/>
-        <CursorPos X="28" Y="195"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="147"/>
+        <CursorPos Y="164"/>
         <UsageCount Value="124"/>
         <Bookmarks Count="1">
           <Item0 Y="405" ID="1"/>
         </Bookmarks>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit8>
       <Unit9>
@@ -212,78 +211,41 @@
       <Unit21>
         <Filename Value="../../../../../Development/FreePascal/lazarus/components/lazutils/masks.pas"/>
         <UnitName Value="Masks"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
         <CursorPos X="12" Y="66"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit21>
     </Units>
-    <JumpHistory Count="16" HistoryIndex="15">
+    <JumpHistory Count="7" HistoryIndex="6">
       <Position1>
         <Filename Value="filesearch.lpr"/>
-        <Caret Line="23" Column="43"/>
+        <Caret Line="19" Column="23"/>
       </Position1>
       <Position2>
-        <Filename Value="filesearch.lpr"/>
-        <Caret Line="10"/>
+        <Filename Value="modifiedfrm.pas"/>
+        <Caret Line="42" Column="15" TopLine="13"/>
       </Position2>
       <Position3>
-        <Filename Value="filesearch.lpr"/>
-        <Caret Line="4" Column="5"/>
+        <Filename Value="modifiedfrm.pas"/>
+        <Caret Line="43" Column="14" TopLine="13"/>
       </Position3>
       <Position4>
-        <Filename Value="main.pas"/>
-        <Caret Line="125" TopLine="70"/>
+        <Filename Value="modifiedfrm.pas"/>
+        <Caret Line="44" Column="15" TopLine="13"/>
       </Position4>
       <Position5>
-        <Filename Value="main.pas"/>
-        <Caret Line="233" Column="49" TopLine="196"/>
+        <Filename Value="modifiedfrm.pas"/>
+        <Caret Line="45" Column="15" TopLine="13"/>
       </Position5>
       <Position6>
-        <Filename Value="main.pas"/>
-        <Caret Line="231" Column="49" TopLine="197"/>
+        <Filename Value="modifiedfrm.pas"/>
+        <Caret Line="46" Column="16" TopLine="13"/>
       </Position6>
       <Position7>
-        <Filename Value="main.pas"/>
-        <Caret Line="223" Column="12" TopLine="202"/>
+        <Filename Value="modifiedfrm.pas"/>
+        <Caret Line="47" Column="17" TopLine="13"/>
       </Position7>
-      <Position8>
-        <Filename Value="filesearch.lpr"/>
-        <Caret Line="4" Column="5"/>
-      </Position8>
-      <Position9>
-        <Filename Value="searchtools.pas"/>
-        <Caret Line="140" Column="41" TopLine="126"/>
-      </Position9>
-      <Position10>
-        <Filename Value="searchtools.pas"/>
-        <Caret Line="17" Column="27"/>
-      </Position10>
-      <Position11>
-        <Filename Value="searchtools.pas"/>
-        <Caret Line="167" Column="8" TopLine="142"/>
-      </Position11>
-      <Position12>
-        <Filename Value="searchtools.pas"/>
-        <Caret Line="173" Column="32" TopLine="156"/>
-      </Position12>
-      <Position13>
-        <Filename Value="searchtools.pas"/>
-        <Caret Line="37" Column="13" TopLine="18"/>
-      </Position13>
-      <Position14>
-        <Filename Value="searchtools.pas"/>
-        <Caret Line="310" TopLine="298"/>
-      </Position14>
-      <Position15>
-        <Filename Value="searchtools.pas"/>
-        <Caret Line="35" Column="17" TopLine="18"/>
-      </Position15>
-      <Position16>
-        <Filename Value="searchtools.pas"/>
-        <Caret Line="331" Column="19" TopLine="322"/>
-      </Position16>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
